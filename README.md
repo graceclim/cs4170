@@ -28,12 +28,6 @@ Tarot Tutor is an interactive learning web app that helps users explore the mean
 - **Jinja2** (Templating)
 - **HTML/CSS**
 
-## 📜 Attribution
-
-- 🎵 **Sound Effect**:  
-  _Fantasy_ui_Button_3.wav_ by [ZenithInfinitiveStudios](https://freesound.org/s/376745/)  
-  Licensed under Creative Commons Attribution.
-
 ---
 
 Built for **COMS4170: User Interface Design**, Spring 2025
