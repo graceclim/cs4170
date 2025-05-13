@@ -1,0 +1,67 @@
+[
+  {
+    "image": "00_Fool.jpg",
+    "question": "What is the name of this card?",
+    "type": "text",
+    "correct": "The Fool"
+  },
+  {
+    "image": "01_Magician.jpg",
+    "question": "What is the name of this card?",
+    "type": "mc",
+    "correct": "The Magician",
+    "options": ["The Magician", "The Lovers", "The Hermit", "The Chariot"]
+  },
+  {
+    "image": "02_High_Priestess.jpg",
+    "question": "What is the name of this card?",
+    "type": "text",
+    "correct": "The High Priestess"
+  },
+  {
+    "image": "03_Empress.jpg",
+    "question": "What is the name of this card?",
+    "type": "mc",
+    "correct": "The Empress",
+    "options": ["The Empress", "The Emperor", "The Fool", "The Hierophant"]
+  },
+  {
+    "image": "04_Emperor.jpg",
+    "question": "What is the name of this card?",
+    "type": "text",
+    "correct": "The Emperor"
+  },
+  {
+    "image": "05_Hierophant.jpg",
+    "question": "What is the name of this card?",
+    "type": "mc",
+    "correct": "The Hierophant",
+    "options": ["The Hierophant", "The Empress", "The Hermit", "Strength"]
+  },
+  {
+    "image": "06_Lovers.jpg",
+    "question": "What is the name of this card?",
+    "type": "text",
+    "correct": "The Lovers"
+  },
+  {
+    "image": "07_Chariot.jpg",
+    "question": "Which card is shown below?",
+    "type": "mc",
+    "correct": "The Chariot",
+    "options": ["The Chariot", "The Fool", "The Magician", "The Emperor"]
+  },
+  {
+    "image": "08_Strength.jpg",
+    "question": "What is the name of this card?",
+    "type": "text",
+    "correct": "Strength"
+  },
+  {
+    "image": "09_Hermit.jpg",
+    "question": "What is the name of this card?",
+    "type": "mc",
+    "correct": "The Hermit",
+    "options": ["The Hermit", "The High Priestess", "The Lovers", "The Magician"]
+  }
+]

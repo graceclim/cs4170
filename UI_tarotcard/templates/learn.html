@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+  <script>
+    function showArrowAndExplanation(index) {
+      const arrow = document.getElementById('arrow-' + index);
+      const desc = document.getElementById('desc-' + index);
+      const btn = document.getElementById('keyword-btn-' + index);
+
+      if (arrow) arrow.style.display = 'block';
+      if (desc) desc.style.display = 'block';
+      if (btn) {
+        btn.disabled = true;
+        btn.classList.add('clicked-keyword');
+      }
+
+      checkAllKeywordsClicked();
+    }
+
+    function checkAllKeywordsClicked() {
+      const buttons = document.querySelectorAll('.keyword-btn');
+      const allClicked = Array.from(buttons).every(btn => btn.disabled);
+      const nextBtn = document.getElementById('next-btn');
+      if (allClicked && nextBtn) {
+        nextBtn.classList.remove('disabled');
+        nextBtn.style.pointerEvents = 'auto';
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const nextBtn = document.getElementById('next-btn');
+      if (nextBtn) {
+        nextBtn.classList.add('disabled');
+        nextBtn.style.pointerEvents = 'none';
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container-xl px-5">
+    <!-- Navigation Buttons -->
+    <div class="d-flex justify-content-between mb-3">
+      {% if lesson_id > 1 %}
+        <a href="{{ url_for('learn', lesson_id=lesson_id - 1) }}" class="nav-btn">
+          ← Previous Page
+        </a>
+      {% else %}
+        <a href="{{ url_for('home') }}" class="nav-btn">
+          ← Home
+        </a>
+      {% endif %}
+
+      <a href="{{ url_for('learn', lesson_id=lesson_id + 1) }}"
+         id="next-btn"
+         class="nav-btn disabled">
+        {% if lesson_id == 10 %}Start Quiz →{% else %}Next Page →{% endif %}
+      </a>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress w-100 mb-4" style="height: 20px;">
+      <div class="progress-bar bg-success" role="progressbar"
+           style="width: {{ (lesson_id / 10) * 100 }}%;"
+           aria-valuenow="{{ lesson_id }}" aria-valuemin="0" aria-valuemax="10">
+        {{ lesson_id }} / 10
+      </div>
+    </div>
+  </div>
+
+  <!-- Tarot Lesson Content -->
+
+    <div class="container-fluid px-5 py-4">
+        <div class="container-fluid d-flex justify-content-center align-items-center flex-column" style="min-height: auto; padding-top: 1rem;">
+            <h1 class="text-center" style="font-size: 4.5rem; margin-top: 10px;">
+            {{ card.name }}
+            </h1>
+
+            <div class="mt-2 mb-3" style="background-color: #f0f0f0; border-radius: 10px; padding: 8px 16px; font-size: 1.5rem; font-weight: bold; color: #a64ac9;">
+            Click on each keyword!
+            </div>
+
+            <div class="card-container position-relative mt-4">
+            <img src="{{ url_for('static', filename='images/' + card.image) }}" alt="Tarot Card" class="tarot-img">
+
+            {% for kw in card.keywords %}
+                <!-- Keyword Button -->
+                <button id="keyword-btn-{{ loop.index0 }}"
+                        onclick="showArrowAndExplanation({{ loop.index0 }})"
+                        class="keyword-btn position-absolute"
+                        style="top: {{ kw.top }}; left: {{ kw.left }}; width: {{ kw.width }}; font-size: {{ kw.font_size }};">
+                {{ kw.text }}
+                </button>
+
+                <!-- Description -->
+                <div id="desc-{{ loop.index0 }}" class="keyword-desc position-absolute text-center"
+                    style="top: calc({{ kw.top }} + 8%); left: {{ kw.left }}; width: {{ kw.width }}; display: none;">
+                {{ kw.description }}
+                </div>
+
+                <!-- Arrow -->
+                <div id="arrow-{{ loop.index0 }}" class="arrow"
+                    style="top: {{ kw.arrow.top }}; left: {{ kw.arrow.left }};
+                            transform: rotate({{ kw.arrow.rotate }});
+                            width: {{ kw.arrow.width }};">
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

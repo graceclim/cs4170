@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  .loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    animation: fadeIn 1s ease-in;
+  }
+
+  .loading-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a974e6;
+    margin-bottom: 1.5rem;
+  }
+
+  .spinner-border {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<div class="loading-screen">
+  <div class="loading-text">🕯️ Calling the spirits... and summoning your fortune...</div>
+  <div class="spinner-border text-purple" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<audio id="summon-audio" autoplay>
+    <source src="{{ url_for('static', filename='audio/summon.wav') }}" type="audio/wav">
+</audio>
+
+<audio id="summon-audio" autoplay>
+    <source src="{{ url_for('static', filename='audio/summon.wav') }}" type="audio/wav">
+  </audio>
+  
+  <script>
+    const audio = document.getElementById('summon-audio');
+    audio.volume = 0;
+  
+    // Quick fade-in (0.3s)
+    const fadeIn = setInterval(() => {
+      if (audio.volume < 0.9) {
+        audio.volume = Math.min(audio.volume + 0.1, 1);
+      } else {
+        clearInterval(fadeIn);
+      }
+    }, 30);  // ≈ 0.3s total
+  
+    // Hold for ~0.4s, then fade out (0.3s)
+    setTimeout(() => {
+      const fadeOut = setInterval(() => {
+        if (audio.volume > 0.1) {
+          audio.volume = Math.max(audio.volume - 0.1, 0);
+        } else {
+          clearInterval(fadeOut);
+          audio.pause();
+        }
+      }, 30);  // ≈ 0.3s total
+    }, 400);  // starts after 0.4s
+  
+    // Redirect after 4 seconds
+    setTimeout(() => {
+      window.location.href = "{{ url_for('fortune') }}";
+    }, 2000);
+  </script>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container-xl px-5 mt-4 text-center">
+    <!-- Navigation -->
+    <div class="d-flex justify-content-between mb-3">
+        {% if question_num > 1 %}
+            <a href="{{ url_for('quiz', question_num=question_num - 1) }}" class="nav-btn no-shadow">← Previous</a>
+        {% else %}
+            <a href="{{ url_for('home') }}" class="nav-btn no-shadow">← Home</a>
+        {% endif %}
+        <button id="next-btn" class="nav-btn no-shadow disabled" disabled>Next →</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress mb-3">
+        <div class="progress-bar bg-info" role="progressbar"
+             style="width: {{ (question_num / 5) * 100 }}%;"
+             aria-valuenow="{{ question_num }}" aria-valuemin="0" aria-valuemax="5">
+            {{ question_num }} / 5
+        </div>
+    </div>
+
+    <h4 class="mb-4">Quiz {{ question_num }}: {{ question.question }}</h4>
+
+    {% if question.image %}
+        <img src="{{ url_for('static', filename='images/' + question.image) }}"
+             alt="Tarot card image"
+             class="img-thumbnail mb-4"
+             style="max-width: 300px;">
+    {% endif %}
+
+    <form action="{{ url_for('submit') }}" method="POST">
+        <input type="hidden" name="question_num" value="{{ question_num }}">
+        <input type="text" name="answer" id="text-answer" required class="form-control mb-3" placeholder="Enter the card name...">
+        <button type="submit" class="btn custom-purple">Submit</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const input = document.getElementById("text-answer");
+            const nextBtn = document.getElementById("next-btn");
+            input.addEventListener("input", () => {
+                if (input.value.trim()) {
+                    nextBtn.classList.remove("disabled");
+                    nextBtn.disabled = false;
+                    nextBtn.onclick = () => document.querySelector("form").submit();
+                } else {
+                    nextBtn.classList.add("disabled");
+                    nextBtn.disabled = true;
+                    nextBtn.onclick = null;
+                }
+            });
+        });
+    </script>
+</div>
+{% endblock %}

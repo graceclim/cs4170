@@ -1,0 +1,183 @@
+/* --- Global --- */
+body {
+  background-color: #f3e8ff;
+}
+
+/* --- Typography --- */
+.card-title {
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.keyword-desc {
+  margin-top: 40px;
+  color: #444444;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* --- Image & Layout --- */
+.tarot-img {
+  height: 600px;
+  width: auto;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+/* --- Arrows for Learn Page --- */
+.arrow {
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: red;
+  transform-origin: left;
+  display: none;
+}
+
+#arrow-carefree {
+  top: 70%;
+  left: -84%;
+  width: 500px;
+  transform: rotate(-1deg);
+}
+
+#arrow-opportunity {
+  top: 6%;
+  left: 88%;
+  width: 330px;
+  transform: rotate(-2deg);
+}
+
+#arrow-innerchild {
+  top: 46%;
+  left: 63%;
+  width: 360px;
+  transform: rotate(34deg);
+}
+
+/* --- Keyword Buttons (Learn Page) --- */
+.keyword-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clicked-keyword {
+  background-color: #3cb371;
+  color: black;
+  border: 1px solid #4CAF50;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.keyword-btn:hover:not(:disabled) {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Navigation Buttons (Previous/Next) --- */
+.nav-btn {
+  background-color: #b983ff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-btn:hover {
+  background-color: #9f5cff;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#next-btn {
+  box-shadow: none !important;
+}
+
+/* --- Custom Purple Buttons (Home/Start) --- */
+.custom-purple {
+  background-color: #a974e6;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+}
+
+.custom-purple:hover {
+  background-color: #935ce6;
+}
+
+/* --- Drag-and-Drop Keywords (Quiz Part 2) --- */
+.draggable {
+  background-color: #a974e6;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: move;
+  display: inline-block;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.draggable:hover:not(:disabled) {
+  background-color: #935ce6;
+}
+
+.used-keyword {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.dropzone {
+  min-height: 50px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.dropzone.filled {
+  background-color: #e0f7fa;
+}
+
+/* --- Navbar --- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  font-size: 1.4rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar-nav .nav-link {
+  padding: 0.6rem 1.2rem;
+}
+
+.nav-btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}

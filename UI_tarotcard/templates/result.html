@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4">🎯 Quiz Results</h2>
+
+  <!-- Score summary with retake button aligned -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <p class="lead mb-0">You got <strong>{{ score }}</strong> out of <strong>{{ total }}</strong> questions correct!</p>
+    <a href="{{ url_for('quiz', question_num=1) }}" class="nav-btn px-4 py-2">Retake the Quiz</a>
+  </div>
+
+  <div class="row mt-4">
+    <!-- Card Recognition Column -->
+    <div class="col-md-6">
+      <h5>Card Recognition Quiz:</h5>
+      <ul class="list-group">
+        {% for i in range(text_order|length) %}
+          {% set idx = text_order[i] %}
+          {% set user_answer = (answers[(i + 1) | string] or 'N/A') %}
+          {% set is_correct = user_answer.strip().lower() == quiz_data[idx].correct.strip().lower() %}
+          <li class="list-group-item">
+            <strong>Q{{ i + 1 }}:</strong>
+            {% if is_correct %}
+              <span class="text-success">✅</span>
+            {% else %}
+              <span class="text-danger">❌</span>
+            {% endif %}
+            <br>
+            <img src="{{ url_for('static', filename='images/' + quiz_data[idx].image) }}" alt="Card image" class="img-fluid my-2" style="max-height: 200px;">
+            <strong>Your answer:</strong> {{ user_answer }}<br>
+            <strong>Correct answer:</strong> {{ quiz_data[idx].correct }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Drag & Drop Column -->
+    <div class="col-md-6">
+      <h5>Drag & Drop Summary:</h5>
+      <ul class="list-group mt-3">
+        {% for result in drag_feedback %}
+          <li class="list-group-item">
+            <strong>{{ result.card }}</strong>:
+            {% if result.correct == result.total %}
+              ✅ All correct!
+            {% elif result.correct == 0 %}
+              ❌ All incorrect.
+            {% else %}
+              ⚠️ {{ result.total - result.correct }} wrong ({{ result.correct }}/{{ result.total }})
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <!-- Divider -->
+      <hr class="my-5">
+
+      <!-- Fortune Section -->
+      <div class="text-center fade-in">
+        <h4 class="mb-3">🔮 Now that you've learned your cards,<br>why not draw a card for your fortune?</h4>
+        <a href="{{ url_for('fortune_loading') }}" class="btn custom-purple mt-2">🔀 Draw From the Deck</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Optional animation styles -->
+<style>
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+<!-- 🎉 Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  window.onload = function () {
+    confetti({
+      particleCount: 120,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  };
+</script>
+{% endblock %}

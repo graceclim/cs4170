@@ -1,0 +1,380 @@
+[
+  {
+    "id": 0,
+    "name": "The Fool",
+    "image": "fool.png",
+    "keywords": [
+      {
+        "text": "Carefree",
+        "top": "55%",
+        "left": "-149%",
+        "width": "230px",
+        "font_size": "2.3rem",
+        "description": "The way he's lifting his heels shows his carefree and spontaneous spirit.",
+        "arrow": {
+          "top": "61%",
+          "left": "-75%",
+          "rotate": "4deg",
+          "width": "480px"
+        }
+      },
+      {
+        "text": "Opportunity",
+        "top": "3%",
+        "left": "170%",
+        "width": "300px",
+        "font_size": "2.3rem",
+        "description": "The sun symbolizes a bright new opportunity.",
+        "arrow": {
+          "top": "7%",
+          "left": "86%",
+          "rotate": "2deg",
+          "width": "270px"
+        }
+      },
+      {
+        "text": "Inner child",
+        "top": "70%",
+        "left": "160%",
+        "width": "300px",
+        "font_size": "2.3rem",
+        "description": "His love for adventure reflects the purity and curiosity of a child.",
+        "arrow": {
+          "top": "48%",
+          "left": "72%",
+          "rotate": "31deg",
+          "width": "320px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "The Magician",
+    "image": "magician.png",
+    "keywords": [
+      {
+        "text": "Confident",
+        "top": "13%",
+        "left": "170%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "The infinity sign is a symbol of self-confidence and endless possibilities.",
+        "arrow": {
+          "top": "20%",
+          "left": "59%",
+          "rotate": "-1deg",
+          "width": "360px"
+        }
+      },
+      {
+        "text": "Skill",
+        "top": "55%",
+        "left": "140%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "The items on the table — the wand, cup, pentacle, and sword — show that he has many different talents and abilities.",
+        "arrow": {
+          "top": "61%",
+          "left": "58%",
+          "rotate": "0deg",
+          "width": "280px"
+        }
+      },
+      {
+        "text": "Creation",
+        "top": "35%",
+        "left": "-160%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "He holds a candle above his head, symbolizing endless creativity.",
+        "arrow": {
+          "top": "39%",
+          "left": "-70%",
+          "rotate": "-5deg",
+          "width": "300px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "The High Priestess",
+    "image": "high_priestess.png",
+    "keywords": [
+      {
+        "text": "Inner Wisdom",
+        "top": "20%",
+        "left": "150%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "As a feminine figure, she stands for intuition and deep inner knowledge.",
+        "arrow": {
+          "top": "17%",
+          "left": "60%",
+          "rotate": "10deg",
+          "width": "290px"
+        }
+      },
+      {
+        "text": "Subconscious",
+        "top": "50%",
+        "left": "-150%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "She represents duality, but also the deeper, hidden parts of the mind.",
+        "arrow": {
+          "top": "58%",
+          "left": "-55%",
+          "rotate": "20deg",
+          "width": "340px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "The Empress",
+    "image": "empress.png",
+    "keywords": [
+      {
+        "text": "Motherhood",
+        "top": "25%",
+        "left": "170%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "Her dress is decorated with pomegranates, symbols of fertility and feminine desire.",
+        "arrow": {
+          "top": "28%",
+          "left": "62%",
+          "rotate": "2deg",
+          "width": "330px"
+        }
+      },
+      {
+        "text": "Beauty",
+        "top": "50%",
+        "left": "-150%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "She represents physical beauty and outer grace.",
+        "arrow": {
+          "top": "53%",
+          "left": "-58%",
+          "rotate": "-12deg",
+          "width": "260px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "The Emperor",
+    "image": "emperor.png",
+    "keywords": [
+      {
+        "text": "Leadership",
+        "top": "35%",
+        "left": "170%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "He embodies the emperor’s power, control, and steady authority.",
+        "arrow": {
+          "top": "38%",
+          "left": "83%",
+          "rotate": "3deg",
+          "width": "280px"
+        }
+      },
+      {
+        "text": "Authority",
+        "top": "70%",
+        "left": "-153%",
+        "width": "300px",
+        "font_size": "2.11rem",
+        "description": "His throne shows he holds power and control.",
+        "arrow": {
+          "top": "75%",
+          "left": "-56%",
+          "rotate": "-45deg",
+          "width": "460px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "The Hierophant",
+    "image": "hierophant.png",
+    "keywords": [
+      {
+        "text": "Education",
+        "top": "22%",
+        "left": "161%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "The two followers beside him show the importance of learning and shared beliefs.",
+        "arrow": {
+          "top": "75%",
+          "left": "97%",
+          "rotate": "-50deg",
+          "width": "310px"
+        }
+      },
+      {
+        "text": "Mentorship",
+        "top": "48%",
+        "left": "-157%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "He’s a spiritual teacher, someone you turn to for guidance and wisdom.",
+        "arrow": {
+          "top": "53%",
+          "left": "-70%",
+          "rotate": "-12deg",
+          "width": "300px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "The Lovers",
+    "image": "lovers.png",
+    "keywords": [
+      {
+        "text": "Relationships",
+        "top": "48%",
+        "left": "160%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "This card speaks to mutual attraction, passion, and emotional bonding.",
+        "arrow": {
+          "top": "59%",
+          "left": "93%",
+          "rotate": "-7deg",
+          "width": "190px"
+        }
+      },
+      {
+        "text": "Love",
+        "top": "39%",
+        "left": "-150%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "The couple represents Adam and Eve, showing pure love and connection.",
+        "arrow": {
+          "top": "45%",
+          "left": "-60%",
+          "rotate": "12deg",
+          "width": "235px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "The Chariot",
+    "image": "chariot.png",
+    "keywords": [
+      {
+        "text": "Taking Charge",
+        "top": "60%",
+        "left": "160%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "His belt suggests that he’s in control and driven by inner will.",
+        "arrow": {
+          "top": "48%",
+          "left": "68%",
+          "rotate": "21deg",
+          "width": "310px"
+        }
+      },
+      {
+        "text": "Victory",
+        "top": "30%",
+        "left": "-158%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "The laurel crown on his head is a symbol of success.",
+        "arrow": {
+          "top": "38%",
+          "left": "-60%",
+          "rotate": "-20deg",
+          "width": "360px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Strength",
+    "image": "strength.png",
+    "keywords": [
+      {
+        "text": "Courage",
+        "top": "18%",
+        "left": "158%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "The lion stands for raw instinct—the courage to face challenges and keep going.",
+        "arrow": {
+          "top": "27%",
+          "left": "152%",
+          "rotate": "136deg",
+          "width": "290px"
+        }
+      },
+      {
+        "text": "Inner Strength",
+        "top": "30%",
+        "left": "-158%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "The woman gently taming the lion shows calm power and self-control.",
+        "arrow": {
+          "top": "34%",
+          "left": "-65%",
+          "rotate": "-4deg",
+          "width": "270px"
+        }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "The Hermit",
+    "image": "hermit.png",
+    "keywords": [
+      {
+        "text": "Personal growth",
+        "top": "35%",
+        "left": "170%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "He walks alone to reflect, learn, and grow beyond worldly desires.",
+        "arrow": {
+          "top": "38%",
+          "left": "76%",
+          "rotate": "3deg",
+          "width": "290px"
+        }
+      },
+      {
+        "text": "Inner light",
+        "top": "75%",
+        "left": "-153%",
+        "width": "300px",
+        "font_size": "2.1rem",
+        "description": "His lantern shines the way, showing that wisdom comes from within.",
+        "arrow": {
+          "top": "79%",
+          "left": "-55%",
+          "rotate": "-52deg",
+          "width": "350px"
+        }
+      }
+    ]
+  }
+]

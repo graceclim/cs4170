@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container text-center mt-5">
+  <h2 class="mb-4">Your Fortune Card 🌙</h2>
+  <img src="{{ url_for('static', filename='images/' + card.image) }}" alt="{{ card.name }}" class="img-fluid mb-3" style="max-height: 400px;">
+  <h3 class="fw-bold">{{ card.name }}</h3>
+
+  <div class="mt-3">
+    {% for kw in card.keywords %}
+      <p><strong>{{ kw.text }}</strong>: {{ kw.description }}</p>
+    {% endfor %}
+  </div>
+
+  <a href="{{ url_for('home') }}" class="btn custom-purple mt-4">Back to Home</a>
+</div>
+{% endblock %}

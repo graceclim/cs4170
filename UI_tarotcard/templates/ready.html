@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container-xl px-5 text-center mt-5">
+  <h1 class="display-4">You're Ready! 🎉</h1>
+  <p class="lead mt-3">You've explored all 10 major tarot cards. Great job absorbing the meanings and keywords!</p>
+  <p>Now it's time to test your understanding in a fun and interactive quiz.</p>
+  <a href="{{ url_for('start_quiz') }}" class="btn custom-purple btn-lg mt-4">Start the Quiz</a>
+</div>
+{% endblock %}
