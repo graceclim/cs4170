@@ -9,10 +9,10 @@ Tarot Tutor is an interactive learning web app that helps users explore the mean
 ## 🌟 Features
 
 - **Learn Mode**: Click on keywords to reveal explanations and visual annotations on each tarot card.
-  - **Users can view each card's image and title.
-  - **Two to three keywords are always visible on the screen as clickable buttons.
-  - **When a keyword is clicked, a red arrow and description appear, and the button turns green and becomes disabled to indicate it was clicked
-  - **Hover-over effects on keyword buttons to visually signal that they are clickable
+  - Users can view each card's image and title.
+  - Two to three keywords are always visible on the screen as clickable buttons.
+  - When a keyword is clicked, a red arrow and description appear, and the button turns green and becomes disabled to indicate it was clicked
+  - Hover-over effects on keyword buttons to visually signal that they are clickable
 - **Quiz Mode**:
   - **Card Recognition Quiz**: Identify tarot cards by name (text input).
   - **Drag-and-Drop Quiz**: Match keywords to the correct card.
